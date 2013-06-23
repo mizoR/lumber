@@ -6,9 +6,7 @@ module Lumber
     module Filter
       class Map < Base
         def exec(data)
-          data.map do |row|
-            @block.call(row)
-          end
+          data.map(*@args, &@block)
         end
       end
     end

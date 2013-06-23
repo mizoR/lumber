@@ -6,9 +6,7 @@ module Lumber
     module Filter
       class Each < Base
         def exec(data)
-          data.each do |row|
-            @block.call(row)
-          end
+          data.each(*@args, &@block)
         end
       end
     end

@@ -6,9 +6,7 @@ module Lumber
     module Filter
       class Select < Base
         def exec(data)
-          data.select do |row|
-            @block.call(row)
-          end
+          data.select(*@args, &@block)
         end
       end
     end
