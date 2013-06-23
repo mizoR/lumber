@@ -6,13 +6,11 @@ require 'lumber/plugin/filter/map'
 
 include Lumber::Plugin
 
-self.pipeline do
-  stage Input::RSS, 'https://github.com/mizoR.atom'
+pipeline do
+  stage Input::RSS, 'http://news.yahoo.com/rss/'
+  stage Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
   stage Filter::Map do |row|
-    {
-      :url   => row.link.href,
-      :title => row.title.content,
-    }
+    {:title => row.title, :url => row.url}
   end
   stage Filter::Each do |row|
     p row
