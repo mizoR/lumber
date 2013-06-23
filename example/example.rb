@@ -3,12 +3,14 @@ require 'lumber'
 require 'lumber/plugin/input/rss'
 require 'lumber/plugin/filter/each'
 require 'lumber/plugin/filter/map'
+require 'lumber/plugin/filter/deduped'
 
 include Lumber::Plugin
 
 pipeline do
   stage Input::RSS, 'http://news.yahoo.com/rss/'
   stage Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
+  stage Filter::Deduped
   stage Filter::Map do |row|
     {:title => row.title, :url => row.url}
   end

@@ -7,7 +7,7 @@ module Lumber
       class Select < Base
         def exec(data)
           data.select do |row|
-            block.call(row)
+            @block.call(row)
           end
         end
       end
