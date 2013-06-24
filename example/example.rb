@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'lumber'
 require 'lumber/plugin/input/rss'
-require 'lumber/plugin/filter/each'
-require 'lumber/plugin/filter/map'
+require 'lumber/plugin/filter'
 require 'lumber/plugin/filter/deduped'
 
 include Lumber::Plugin

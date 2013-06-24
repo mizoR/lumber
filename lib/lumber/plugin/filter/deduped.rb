@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'lumber/plugin/filter/select'
+require 'lumber/plugin/filter'
+require 'yaml'
 
 module Lumber
   module Plugin
@@ -26,7 +27,11 @@ module Lumber
             end
 
             File.open(hash_path, 'w') do |file|
-              file.write(entry.to_yaml)
+              file.write({
+                :url     => entry.url,
+                :title   => entry.title,
+                :content => entry.content,
+              }.to_yaml)
             end if deduped
 
             deduped
