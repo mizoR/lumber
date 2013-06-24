@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-require 'lumber/plugin/filter'
+require 'macaroni/plugin/filter'
 require 'yaml'
 
-module Lumber
+module Macaroni
   module Plugin
     module Filter
       class Deduped < Select
         def initialize(options={})
-          @cache_path = options[:cache_path] || '/tmp/lumber-cache'
+          @cache_path = options[:cache_path] || '/tmp/macaroni-cache'
           @block = lambda { |entry|
             hash = Digest::MD5.hexdigest(entry.url)
             hash_path = File.join(@cache_path, hash)

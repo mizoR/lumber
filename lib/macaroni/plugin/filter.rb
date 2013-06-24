@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-require 'lumber/plugin/filter/base'
+require 'macaroni/plugin/filter/base'
 
-module Lumber
+module Macaroni
   module Plugin
     module Filter
       def self.const_missing(name)

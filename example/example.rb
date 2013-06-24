@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-require 'lumber'
-require 'lumber/plugin/input/rss'
-require 'lumber/plugin/filter'
-require 'lumber/plugin/filter/deduped'
-require 'lumber/plugin/output/stdout'
+require 'macaroni'
+require 'macaroni/plugin/input/rss'
+require 'macaroni/plugin/filter'
+require 'macaroni/plugin/filter/deduped'
+require 'macaroni/plugin/output/stdout'
 
-include Lumber::Plugin
+include Macaroni::Plugin
 
 pipeline do
   stage Input::RSS, 'http://news.yahoo.com/rss/'

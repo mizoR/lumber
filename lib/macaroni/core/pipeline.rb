@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-module Lumber
+module Macaroni
   module Core
     class Pipeline
       def initialize

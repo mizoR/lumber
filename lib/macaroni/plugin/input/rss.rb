@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'feed-normalizer'
 
-module Lumber
+module Macaroni
   module Plugin
     module Input
       class RSS

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-module Lumber
+module Macaroni
   module Plugin
     module Output
       class ImKayac

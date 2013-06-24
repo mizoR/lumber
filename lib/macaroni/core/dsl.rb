@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-require 'lumber/core/pipeline'
+require 'macaroni/core/pipeline'
 
-module Lumber
+module Macaroni
   module Core
     module DSL
       def self.included klass
