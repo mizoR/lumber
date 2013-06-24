@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-require 'macaroni'
+require 'macaroni/core/dsl'
 require 'macaroni/plugin/input/rss'
 require 'macaroni/plugin/filter'
 require 'macaroni/plugin/filter/deduped'
