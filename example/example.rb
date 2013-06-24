@@ -7,13 +7,13 @@ require 'macaroni/plugin/output/stdout'
 
 include Macaroni::Plugin
 
-pipeline do
-  stage Input::RSS, 'http://news.yahoo.com/rss/'
-  stage Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
-  stage Filter::Deduped
-  stage Filter::Map do |row|
+pipe do
+  plug Input::RSS, 'http://news.yahoo.com/rss/'
+  plug Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
+  plug Filter::Deduped
+  plug Filter::Map do |row|
     {:title => row.title, :url => row.url}
   end
-  stage Output::Stdout
+  plug Output::Stdout
 end
 

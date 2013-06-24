@@ -2,21 +2,21 @@
 
 module Macaroni
   module Core
-    class Pipeline
+    class Pipe
       def initialize
-        @stages = []
+        @plugs = []
       end
 
       def exec
-        @stages.inject([]) do |data, (executer, block)|
+        @plugs.inject([]) do |data, (executer, block)|
           executer.exec(data)
         end
       end
 
       private
 
-      def stage(klass, *args, &block)
-        @stages << [klass.new(*args, &block)]
+      def plug(klass, *args, &block)
+        @plugs << [klass.new(*args, &block)]
       end
     end
   end
