@@ -4,19 +4,19 @@ module Macaroni
   module Core
     class Pipe
       def initialize
-        @plugs = []
+        @plugins = []
       end
 
       def exec
-        @plugs.inject([]) do |data, (executer, block)|
-          executer.exec(data)
+        @plugins.inject([]) do |data, plugin|
+          plugin.exec(data)
         end
       end
 
       private
 
       def plug(klass, *args, &block)
-        @plugs << [klass.new(*args, &block)]
+        @plugins << klass.new(*args, &block)
       end
     end
   end
