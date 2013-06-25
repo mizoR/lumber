@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 require 'macaroni/core/pipe'
 
-def self.pipe(&block)
+def self.pipe(name, &block)
   pipe = Macaroni::Core::Pipe.new
   pipe.instance_eval(&block)
-  pipe.exec
+  Macaroni::application.set_pipe(name, pipe)
 end
 
