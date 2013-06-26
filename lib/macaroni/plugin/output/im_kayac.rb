@@ -24,7 +24,7 @@ module Macaroni
                 :handler  => entry.url,
                 :password => @password,
                 :sig      => sig,
-                :message  => entry.title,
+                :message  => entry.title
               )
               http.request(request)
             end
