@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'macaroni/core/pipe'
 
 module Macaroni
   module DSL

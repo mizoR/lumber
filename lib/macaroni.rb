@@ -1,5 +1,6 @@
 require 'macaroni/version'
 require 'macaroni/core/application'
+require 'macaroni/core/pipe'
 require 'macaroni/plugin/input/rss'
 require 'macaroni/plugin/filter'
 require 'macaroni/plugin/filter/deduped'

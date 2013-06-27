@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'macaroni/plugin/filter'
 require 'yaml'
 
 module Macaroni
