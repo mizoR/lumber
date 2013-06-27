@@ -3,8 +3,8 @@ require 'macaroni/core/pipe'
 
 module Macaroni
   module DSL
-    def pipe(name, &block)
-      pipe = Macaroni::Core::Pipe.new
+    def pipe(name, options={}, &block)
+      pipe = Macaroni::Core::Pipe.new options
       pipe.instance_eval(&block)
       Macaroni::application.set_pipe(name, pipe)
     end

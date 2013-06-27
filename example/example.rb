@@ -11,6 +11,15 @@ pipe :default do
   plug Output::Stdout
 end
 
+pipe :string_processing_sample, :default_data => 'Hello World!' do
+  plug Filter::Downcase
+  plug Output::Stdout
+  plug Filter::Reverse
+  plug Output::Stdout
+  plug Filter::Upcase
+  plug Output::Stdout
+end
+
 pipe :reverse_sample do
   plug Input::RSS, 'http://news.yahoo.com/rss/'
   plug Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'

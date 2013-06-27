@@ -3,12 +3,13 @@
 module Macaroni
   module Core
     class Pipe
-      def initialize
+      def initialize(options={})
+        @default_data = options[:default_data] || []
         @plugins = []
       end
 
       def exec
-        @plugins.inject([]) do |data, (klass, args, block)|
+        @plugins.inject(@default_data) do |data, (klass, args, block)|
           klass.new(*args, &block).exec(data)
         end
       end
