@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe Macaroni::Core::Application do
   let :application do
-    Macaroni::Core::Application.instance
+    described_class.instance
   end
 
   context '#new' do

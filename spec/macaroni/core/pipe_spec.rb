@@ -5,7 +5,7 @@ describe Macaroni::Core::Pipe do
     plugin_class = double(:plugin_class)
     plugin_class.should_receive(:new).exactly(3).times
 
-    pipe = Macaroni::Core::Pipe.new
+    pipe = described_class.new
     pipe.send(:plug, plugin_class) {}
     pipe.send(:plug, plugin_class) {}
     pipe.send(:plug, plugin_class) {}
@@ -19,7 +19,7 @@ describe Macaroni::Core::Pipe do
     plugin_class = double(:plugin_class).stub(:new)
     plugin_class.should_receive(:new).and_return(plugin)
 
-    pipe = Macaroni::Core::Pipe.new
+    pipe = described_class.new
     pipe.send(:plug, plugin_class) {}
     expect(pipe.exec).to eq 'TEST'
   end
