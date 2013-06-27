@@ -8,9 +8,8 @@ module Macaroni
         end
 
         def exec(data)
-          data.each do |row|
-            $stdout.puts row
-          end
+          $stdout.puts data
+          data
         end
       end
     end
