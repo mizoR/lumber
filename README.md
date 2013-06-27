@@ -1,4 +1,5 @@
-# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni) [![Code Climate](https://codeclimate.com/github/mizoR/macaroni.png)](https://codeclimate.com/github/mizoR/macaroni)
+# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni) [![Code Climate](https://codeclimate.com/github/mizoR/macaroni.png)](https://codeclimate.com/github/mizoR/macaroni) [![Coverage Status](https://coveralls.io/repos/mizoR/macaroni/badge.png?branch=master)](https://coveralls.io/r/mizoR/macaroni?branch=master)
+
 
 TODO: Write a gem description
 
