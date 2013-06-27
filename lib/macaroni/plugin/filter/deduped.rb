@@ -11,20 +11,7 @@ module Macaroni
           @block = lambda { |entry|
             hash = Digest::MD5.hexdigest(entry.url)
             hash_path = File.join(@cache_path, hash)
-
-            deduped = begin
-              case
-              when !File.exists?(hash_path)
-                true
-              when options[:compare_body]
-                old = File.open(hash_path, 'r') do |file|
-                  YAML.load(file.read)
-                end
-                entry.title != old.title
-              else
-                false
-              end
-            end
+            deduped   = !File.exists?(hash_path)
 
             File.open(hash_path, 'w') do |file|
               file.write({
