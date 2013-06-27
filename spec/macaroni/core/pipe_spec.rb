@@ -3,7 +3,6 @@
 describe Macaroni::Core::Pipe do
   it '#plug' do
     plugin_class = double(:plugin_class)
-    plugin_class.should_receive(:new).exactly(3).times
 
     pipe = described_class.new
     pipe.send(:plug, plugin_class) {}

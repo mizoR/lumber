@@ -8,15 +8,15 @@ module Macaroni
       end
 
       def exec
-        @plugins.inject([]) do |data, plugin|
-          plugin.exec(data)
+        @plugins.inject([]) do |data, (klass, args, block)|
+          klass.new(*args, &block).exec(data)
         end
       end
 
       private
 
       def plug(klass, *args, &block)
-        @plugins << klass.new(*args, &block)
+        @plugins << [klass, args, block]
       end
     end
   end
