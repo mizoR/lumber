@@ -1,5 +1,7 @@
 # -*- coding: utf-8-*-
 
+include Macaroni::Plugin
+
 pipe :default do
   plug Input::RSS, 'http://news.yahoo.com/rss/'
   plug Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-describe Macaroni::Core::DSL do
+describe Macaroni::DSL do
 end
 

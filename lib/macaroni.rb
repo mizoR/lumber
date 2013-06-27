@@ -1,14 +1,11 @@
 require 'macaroni/version'
 require 'macaroni/core/application'
-require 'macaroni/core/dsl'
 require 'macaroni/plugin/input/rss'
 require 'macaroni/plugin/filter'
 require 'macaroni/plugin/filter/deduped'
 require 'macaroni/plugin/output/stdout'
 require 'macaroni/plugin/output/im_kayac'
 require 'optparse'
-
-include Macaroni::Plugin
 
 module Macaroni
   def self.application
