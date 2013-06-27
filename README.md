@@ -1,4 +1,4 @@
-# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni)
+# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni) [![Code Climate](https://codeclimate.com/github/mizoR/macaroni.png)](https://codeclimate.com/github/mizoR/macaroni)
 
 TODO: Write a gem description
 
