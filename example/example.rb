@@ -41,3 +41,12 @@ pipe :each_with_index_sample do
   plug Output::Stdout
 end
 
+pipe :im_kayac_sample do
+  plug Input::RSS, 'http://news.yahoo.com/rss/'
+  plug Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
+  plug Filter::Map do |row|
+    {:message => row.title, :handler => row.url}
+  end
+  plug Output::ImKayac, :username => ENV['IM_KAYAC_USERNAME'], :secret_key => ENV['IM_KAYAC_SECRET_KEY']
+end
+
