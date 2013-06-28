@@ -11,7 +11,7 @@ pipe :default do
   plug Output::Stdout
 end
 
-pipe :string_processing_sample, :default_data => 'Hello World!' do
+pipe :string_processing_sample, :data => 'Hello World!' do
   plug Filter::Downcase
   plug Output::Stdout
   plug Filter::Reverse
