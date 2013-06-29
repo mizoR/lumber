@@ -15,6 +15,12 @@ pipe :news do
   plug Output::Stdout
 end
 
+pipe :ruby_news do
+  plug Input::HTML, 'http://www.ruby-lang.org/en/'
+  plug Filter::Css, '#content div.post h3'
+  plug Output::Stdout
+end
+
 pipe :string_processing_sample, :data => 'Hello World!' do
   plug Filter::Downcase
   plug Output::Stdout
