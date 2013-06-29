@@ -2,9 +2,13 @@
 
 include Macaroni::Plugin
 
-pipe :default do
+pipe :news do
   plug Input::RSS, 'http://news.yahoo.com/rss/'
-  plug Input::RSS, 'http://rss.dailynews.yahoo.co.jp/fc/rss.xml'
+  plug Input::RSS, 'https://news.google.com/news/feeds?cf=all&ned=us&hl=en&output=rss'
+  plug Filter::Sort do |a, b|
+    b.date_published <=> a.date_published
+  end
+  plug Filter::Slice, 1, 5
   plug Filter::Map do |row|
     {:title => row.title, :url => row.url}
   end

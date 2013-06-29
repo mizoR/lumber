@@ -6,10 +6,10 @@ require 'macaroni/version'
 Gem::Specification.new do |gem|
   gem.name          = "macaroni"
   gem.version       = Macaroni::VERSION
-  gem.authors       = ["mizoryu"]
-  gem.email         = ["suzunatsu@yahoo.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.authors       = ["mizoR"]
+  gem.email         = ["r.mizokami@gmail.com"]
+  gem.description   = %q{Macaroni is a ruby DSL for easily feed agregation and pipeline processing.}
+  gem.summary       = %q{Ruby DSL for feed aggregation.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
