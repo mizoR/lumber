@@ -6,11 +6,12 @@ module Macaroni
     module Input
       class RSS
         def initialize(url)
-          @feed = FeedNormalizer::FeedNormalizer.parse open(url)
+          @url = url
         end
 
         def exec(data)
-          data + @feed.entries
+          feed = FeedNormalizer::FeedNormalizer.parse open(@url)
+          data + feed.entries
         end
       end
     end
