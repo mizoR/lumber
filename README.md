@@ -1,4 +1,4 @@
-# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni) [![Code Climate](https://codeclimate.com/github/mizoR/macaroni.png)](https://codeclimate.com/github/mizoR/macaroni) [![Coverage Status](https://coveralls.io/repos/mizoR/macaroni/badge.png?branch=master)](https://coveralls.io/r/mizoR/macaroni?branch=master)
+# Macaroni [![Build Status](https://secure.travis-ci.org/mizoR/macaroni.png)](https://travis-ci.org/mizoR/macaroni) [![Code Climate](https://codeclimate.com/github/mizoR/macaroni.png)](https://codeclimate.com/github/mizoR/macaroni) [![Coverage Status](https://coveralls.io/repos/mizoR/macaroni/badge.png?branch=master)](https://coveralls.io/r/mizoR/macaroni?branch=master) [![Dependency Status](https://gemnasium.com/mizoR/macaroni.png)](https://gemnasium.com/mizoR/macaroni)
 
 
 Macaroni is a ruby DSL for easily feed agregation and pipeline processing.
