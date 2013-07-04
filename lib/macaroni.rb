@@ -7,6 +7,7 @@ require 'macaroni/plugin/filter'
 require 'macaroni/plugin/filter/deduped'
 require 'macaroni/plugin/output/stdout'
 require 'macaroni/plugin/output/im_kayac'
+require 'macaroni/plugin/output/ikachan'
 require 'optparse'
 
 module Macaroni
