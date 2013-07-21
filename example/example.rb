@@ -71,3 +71,11 @@ pipe :im_kayac_sample do
   plug Output::ImKayac, :username => ENV['IM_KAYAC_USERNAME'], :secret_key => ENV['IM_KAYAC_SECRET_KEY']
 end
 
+pipe :wget do
+  plug Input::HTML, 'http://ffffound.com/'
+  plug Filter::Css, 'blockquote td:first-child img'
+  plug Filter::Map do |row|
+    row.attribute('src').to_s
+  end
+  plug Output::Wget, '/tmp/ffffound'
+end
