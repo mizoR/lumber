@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Macaroni is a ruby DSL for easily feed agregation and pipeline processing.}
   gem.summary       = %q{Ruby DSL for feed aggregation.}
   gem.homepage      = "https://github.com/mizoR/macaroni"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
